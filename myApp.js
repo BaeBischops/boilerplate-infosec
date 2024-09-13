@@ -2,6 +2,9 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
+// Use Helmet middleware
+app.use(helmet());
+
 
 
 
