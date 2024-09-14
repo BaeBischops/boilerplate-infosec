@@ -5,7 +5,8 @@ const app = express();
 // Use helmet to remove X-Powered-By header
 app.use(helmet.hidePoweredBy());
 
-
+// Set the X-Frame-Options header to DENY to prevent clickjacking
+app.use(helmet.frameguard({action: 'deny'}));
 
 
 
