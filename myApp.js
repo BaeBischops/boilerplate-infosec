@@ -5,20 +5,6 @@ const app = express();
 // Use helmet to remove X-Powered-By header
 app.use(helmet.hidePoweredBy());
 
-// Read PORT from environment variables, default to 3000 if not set
-const port = process.env.PORT || 3000;
-
-// Your routes and other middleware
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
-
-
 
 
 
