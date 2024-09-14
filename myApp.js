@@ -8,6 +8,10 @@ app.use(helmet.hidePoweredBy());
 // Set the X-Frame-Options header to DENY to prevent clickjacking
 app.use(helmet.frameguard({action: 'deny'}));
 
+// Use XSS filter to prevent XSS attacks
+app.use(helmet.xssFilter());
+
+
 
 
 
