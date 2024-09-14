@@ -11,6 +11,19 @@ app.use(helmet.frameguard({action: 'deny'}));
 // Use XSS filter to prevent XSS attacks
 app.use(helmet.xssFilter());
 
+// Your routes and other middleware
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
+// Use helmet.noSniff() to prevent MIME type sniffing
+app.use(helmet.noSniff());
+
+// Start the server
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 
 
