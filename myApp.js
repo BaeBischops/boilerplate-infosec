@@ -9,7 +9,7 @@ app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action: 'deny'}));
 
 // Use XSS filter to prevent XSS attacks
-//app.use(helmet.xssFilter());
+app.use(helmet.xssFilter());
 
 // Your routes and other middleware
 app.get('/', (req, res) => {
